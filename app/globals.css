@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Conejo Valley Clone Default Theme Tokens */
+    --theme-bg: #FAF8F5;
+    --theme-bg-secondary: #F3EFEA;
+    --theme-bg-card: #FFFFFF;
+    --theme-bg-accent: #EBE5DC;
+    --theme-bg-dark: #2B3A34;
+    
+    --theme-text: #222B26;
+    --theme-text-muted: #5C6760;
+    --theme-text-light: #FAF8F5;
+    
+    --theme-primary: #2D3B36;
+    --theme-primary-hover: #1E2824;
+    --theme-secondary: #4A5D54;
+    --theme-accent: #8C6D53;
+    --theme-border: #E5DFC;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--theme-bg);
+    color: var(--theme-text);
+  }
+
+  body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: var(--font-sans), sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif), Georgia, serif;
+    color: var(--theme-text);
+    letter-spacing: -0.01em;
+  }
+
+  /* Accessible focus indicators */
+  :focus-visible {
+    outline: 2px solid var(--theme-primary);
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .section-container {
+    width: 100%;
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .section-container {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .section-container {
+      padding-left: 3.5rem;
+      padding-right: 3.5rem;
+    }
+  }
+}
