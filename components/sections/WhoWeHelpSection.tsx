@@ -23,13 +23,13 @@ export default function WhoWeHelpSection() {
         </div>
 
         {/* 3 Columns Service Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 lg:gap-8">
           {items.map((svc) => (
             <div
               key={svc.title}
-              className="bg-theme-bg-secondary/60 p-8 sm:p-9 flex flex-col justify-between border border-theme-border/60 hover:border-theme-primary/40 transition-all rounded-none shadow-sm hover:shadow-md"
+              className="bg-theme-bg-secondary/60 p-6 sm:p-8 lg:p-9 flex flex-col justify-between border border-theme-border/60 hover:border-theme-primary/40 transition-all rounded-none shadow-sm hover:shadow-md"
             >
-              <div className="space-y-4 mb-8">
+              <div className="space-y-3.5 sm:space-y-4 mb-6 sm:mb-8">
                 <h3 className="font-serif text-2xl sm:text-[26px] font-normal text-theme-text leading-snug">
                   {svc.title}
                 </h3>

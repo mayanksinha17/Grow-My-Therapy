@@ -23,10 +23,10 @@ export default function OfficeSection() {
         </div>
 
         {/* 2-Column Photo Showcase */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 mb-10 sm:mb-12">
           {images.map((img, idx) => (
             <div key={idx} className="flex flex-col group">
-              <div className="relative aspect-[4/3] w-full rounded-t-[80px] rounded-b-none overflow-hidden shadow-md border-2 border-theme-border/50 bg-theme-bg-secondary">
+              <div className="relative aspect-[4/3] w-full rounded-t-[60px] sm:rounded-t-[80px] rounded-b-none overflow-hidden shadow-md border-2 border-theme-border/50 bg-theme-bg-secondary">
                 <Image
                   src={img.src}
                   alt={img.alt}
@@ -35,7 +35,7 @@ export default function OfficeSection() {
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
-              <p className="mt-4 text-xs font-sans text-theme-text-muted text-center italic">
+              <p className="mt-3 sm:mt-4 text-xs font-sans text-theme-text-muted text-center italic">
                 {img.caption}
               </p>
             </div>
@@ -43,13 +43,13 @@ export default function OfficeSection() {
         </div>
 
         {/* Location & Telehealth Callout Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          <div className="bg-theme-bg-secondary/60 p-6 sm:p-7 border border-theme-border/60 flex items-start gap-4">
-            <div className="p-2.5 bg-theme-primary text-white rounded-none shrink-0 mt-1">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 max-w-4xl mx-auto">
+          <div className="bg-theme-bg-secondary/60 p-5 sm:p-7 border border-theme-border/60 flex items-start gap-3.5 sm:gap-4">
+            <div className="p-2.5 bg-theme-primary text-white rounded-none shrink-0 mt-0.5">
               <MapPin className="w-5 h-5" />
             </div>
             <div className="space-y-1">
-              <h3 className="font-serif text-lg font-medium text-theme-text">
+              <h3 className="font-serif text-base sm:text-lg font-medium text-theme-text">
                 In-Person Santa Monica Office
               </h3>
               <p className="font-sans text-xs sm:text-sm text-theme-text-muted font-light">
@@ -61,12 +61,12 @@ export default function OfficeSection() {
             </div>
           </div>
 
-          <div className="bg-theme-bg-secondary/60 p-6 sm:p-7 border border-theme-border/60 flex items-start gap-4">
-            <div className="p-2.5 bg-theme-secondary text-white rounded-none shrink-0 mt-1">
+          <div className="bg-theme-bg-secondary/60 p-5 sm:p-7 border border-theme-border/60 flex items-start gap-3.5 sm:gap-4">
+            <div className="p-2.5 bg-theme-secondary text-white rounded-none shrink-0 mt-0.5">
               <Video className="w-5 h-5" />
             </div>
             <div className="space-y-1">
-              <h3 className="font-serif text-lg font-medium text-theme-text">
+              <h3 className="font-serif text-base sm:text-lg font-medium text-theme-text">
                 Telehealth Statewide Across CA
               </h3>
               <p className="font-sans text-xs sm:text-sm text-theme-text-muted font-light">

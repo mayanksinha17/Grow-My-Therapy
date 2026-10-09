@@ -26,7 +26,7 @@ export default function FAQSection() {
         </div>
 
         {/* Accordion FAQ list */}
-        <div className="space-y-4">
+        <div className="space-y-3.5 sm:space-y-4">
           {items.map((item, idx) => {
             const isOpen = openIndex === idx;
             return (
@@ -37,10 +37,10 @@ export default function FAQSection() {
                 <button
                   type="button"
                   onClick={() => toggle(idx)}
-                  className="w-full py-5 px-6 sm:px-8 flex items-center justify-between text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-theme-primary transition-colors hover:bg-theme-bg-secondary/30"
+                  className="w-full py-4 sm:py-5 px-5 sm:px-8 flex items-center justify-between text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-theme-primary transition-colors hover:bg-theme-bg-secondary/30"
                   aria-expanded={isOpen}
                 >
-                  <span className="font-serif text-lg sm:text-xl font-normal text-theme-text pr-4">
+                  <span className="font-serif text-base sm:text-lg lg:text-xl font-normal text-theme-text pr-3 sm:pr-4">
                     {item.question}
                   </span>
                   <ChevronDown
@@ -51,7 +51,7 @@ export default function FAQSection() {
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 sm:px-8 pb-6 pt-1 border-t border-theme-border/30 font-sans text-xs sm:text-sm text-theme-text-muted leading-relaxed font-light">
+                  <div className="px-5 sm:px-8 pb-5 sm:pb-6 pt-1 border-t border-theme-border/30 font-sans text-xs sm:text-sm text-theme-text-muted leading-relaxed font-light">
                     <p>{item.answer}</p>
                   </div>
                 )}

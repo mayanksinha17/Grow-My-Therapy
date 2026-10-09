@@ -20,6 +20,9 @@ export default function AppointmentCTA() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    if (!formData.name.trim() || !formData.email.trim()) {
+      return;
+    }
     setSubmitted(true);
   };
 
@@ -41,7 +44,7 @@ export default function AppointmentCTA() {
               </p>
             </div>
 
-            <div className="relative aspect-[4/3] w-full rounded-t-[100px] rounded-b-none overflow-hidden shadow-md border-2 border-theme-border/50">
+            <div className="relative aspect-[4/3] w-full rounded-t-[75px] sm:rounded-t-[100px] rounded-b-none overflow-hidden shadow-md border-2 border-theme-border/50">
               <Image
                 src="/images/maya/office1.jpg"
                 alt="Dr. Maya Reynolds Therapy Office in Santa Monica"
@@ -51,7 +54,7 @@ export default function AppointmentCTA() {
               />
             </div>
 
-            <div className="p-5 bg-theme-bg-secondary/70 border border-theme-border/60 space-y-2">
+            <div className="p-4 sm:p-5 bg-theme-bg-secondary/70 border border-theme-border/60 space-y-2">
               <div className="flex items-center gap-2 text-xs font-sans font-semibold text-theme-text">
                 <MapPin className="w-4 h-4 text-theme-primary shrink-0" />
                 <span>Santa Monica Location</span>
@@ -66,7 +69,7 @@ export default function AppointmentCTA() {
           </div>
 
           {/* Right Column: Consultation Inquiry Form */}
-          <div className="lg:col-span-7 bg-theme-bg-secondary/60 p-8 sm:p-10 border border-theme-border/70 shadow-sm">
+          <div className="lg:col-span-7 bg-theme-bg-secondary/60 p-6 sm:p-8 lg:p-10 border border-theme-border/70 shadow-sm">
             <h3 className="font-serif text-2xl sm:text-3xl font-normal text-theme-text mb-2">
               Request an Initial Consultation
             </h3>

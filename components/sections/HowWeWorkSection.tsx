@@ -12,7 +12,7 @@ export default function HowWeWorkSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           {/* Left Column: Dr. Maya Reynolds Portrait */}
           <div className="lg:col-span-5">
-            <div className="relative aspect-[3/4] w-full max-w-md mx-auto rounded-t-[140px] rounded-b-none overflow-hidden shadow-md border-2 border-theme-border/50">
+            <div className="relative aspect-[3/4] w-full max-w-[280px] sm:max-w-md mx-auto rounded-t-[110px] sm:rounded-t-[140px] rounded-b-none overflow-hidden shadow-md border-2 border-theme-border/50">
               <Image
                 src={image.src}
                 alt={image.alt}
@@ -43,8 +43,8 @@ export default function HowWeWorkSection() {
               ))}
             </div>
 
-            <div className="pt-4">
-              <Button href={cta.href} variant="primary" className="!px-7 !py-3.5 text-xs uppercase tracking-widest">
+            <div className="pt-2 sm:pt-4">
+              <Button href={cta.href} variant="primary" className="w-full sm:w-auto text-center !px-7 !py-3.5 text-xs uppercase tracking-widest">
                 {cta.text}
               </Button>
             </div>

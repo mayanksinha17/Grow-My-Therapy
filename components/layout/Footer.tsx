@@ -10,8 +10,8 @@ export default function Footer() {
   return (
     <footer className="bg-theme-bg text-theme-text border-t border-theme-border/60">
       {/* Main 3-Column Footer */}
-      <div className="section-container py-16 sm:py-20">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
+      <div className="section-container py-12 sm:py-16 lg:py-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-8">
           {/* Column 1: Doctor Profile & Title (5 cols on lg) */}
           <div className="lg:col-span-5 space-y-4">
             <div>

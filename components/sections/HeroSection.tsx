@@ -18,19 +18,19 @@ export default function HeroSection() {
               </span>
             </div>
 
-            <h1 className="font-serif text-4xl sm:text-5xl xl:text-6xl font-normal text-theme-text leading-[1.12] tracking-tight">
+            <h1 className="font-serif text-3xl sm:text-5xl xl:text-6xl font-normal text-theme-text leading-[1.14] sm:leading-[1.12] tracking-tight">
               {heading}
             </h1>
 
-            <p className="font-sans text-base sm:text-lg text-theme-text-muted max-w-xl leading-relaxed font-light">
+            <p className="font-sans text-sm sm:text-base lg:text-lg text-theme-text-muted max-w-xl leading-relaxed font-light">
               {subheading}
             </p>
 
-            <div className="pt-2 flex flex-wrap items-center gap-4">
-              <Button href={cta.href} variant="primary" className="!px-8 !py-4 text-xs uppercase tracking-widest font-medium">
+            <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4">
+              <Button href={cta.href} variant="primary" className="w-full sm:w-auto text-center !px-8 !py-4 text-xs uppercase tracking-widest font-medium">
                 {cta.text}
               </Button>
-              <Button href={secondaryCta.href} variant="secondary" className="!px-8 !py-4 text-xs uppercase tracking-widest font-medium">
+              <Button href={secondaryCta.href} variant="secondary" className="w-full sm:w-auto text-center !px-8 !py-4 text-xs uppercase tracking-widest font-medium">
                 {secondaryCta.text}
               </Button>
             </div>
@@ -38,9 +38,9 @@ export default function HeroSection() {
 
           {/* Right Column: Staggered Imagery Frame */}
           <div className="lg:col-span-5 xl:col-span-5 relative flex justify-center items-center">
-            <div className="relative w-full max-w-[420px] aspect-[4/5]">
+            <div className="relative w-full max-w-[340px] sm:max-w-[420px] aspect-[4/5]">
               {/* Primary Large Image: Dr. Maya Reynolds Portrait */}
-              <div className="relative w-[82%] h-[82%] rounded-t-[140px] rounded-b-none overflow-hidden shadow-md border-2 border-theme-border/50">
+              <div className="relative w-[82%] h-[82%] rounded-t-[110px] sm:rounded-t-[140px] rounded-b-none overflow-hidden shadow-md border-2 border-theme-border/50">
                 <Image
                   src={images.headshot.src}
                   alt={images.headshot.alt}
@@ -52,7 +52,7 @@ export default function HeroSection() {
               </div>
 
               {/* Secondary Overlapping Arched Image: Sunlit Santa Monica Office */}
-              <div className="absolute -bottom-4 -right-2 sm:-bottom-6 sm:-right-4 w-[54%] h-[58%] rounded-t-[90px] rounded-b-none overflow-hidden shadow-lg border-4 border-theme-bg">
+              <div className="absolute -bottom-2 -right-1 sm:-bottom-6 sm:-right-4 w-[54%] h-[58%] rounded-t-[75px] sm:rounded-t-[90px] rounded-b-none overflow-hidden shadow-lg border-4 border-theme-bg">
                 <Image
                   src={images.officePreview.src}
                   alt={images.officePreview.alt}
