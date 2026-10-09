@@ -18,9 +18,9 @@ const mulish = Mulish({
 });
 
 export const metadata: Metadata = {
-  title: "Counseling in Newbury Park, CA | Conejo Valley Family Counseling",
+  title: "Dr. Maya Reynolds, PsyD | Licensed Clinical Psychologist Santa Monica, CA",
   description:
-    "Counseling for adults, couples, and children in Newbury Park & across CA. EMDR, trauma & dissociation, special needs parenting, anxiety, & more.",
+    "Grounded, evidence-based therapy for adults navigating anxiety, trauma, EMDR, and burnout. In-person therapy in Santa Monica, CA and secure telehealth statewide across California.",
 };
 
 export default function RootLayout({

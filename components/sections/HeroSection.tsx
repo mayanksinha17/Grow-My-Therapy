@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import { cloneContent } from "@/data/cloneContent";
+import { mayaContent } from "@/data/mayaContent";
 import Button from "@/components/ui/Button";
 
 export default function HeroSection() {
-  const { eyebrow, heading, subheading, cta, images } = cloneContent.hero;
+  const { eyebrow, heading, subheading, cta, secondaryCta, images } = mayaContent.hero;
 
   return (
     <section className="relative bg-theme-bg py-16 sm:py-20 lg:py-28 overflow-hidden">
@@ -13,7 +13,7 @@ export default function HeroSection() {
           {/* Left Column: Text & CTA */}
           <div className="lg:col-span-7 xl:col-span-7 space-y-6 sm:space-y-8 pr-0 lg:pr-6">
             <div className="inline-block">
-              <span className="text-xs sm:text-xs font-sans font-semibold tracking-widest text-theme-primary uppercase">
+              <span className="text-[11px] sm:text-xs font-sans font-semibold tracking-widest text-theme-primary uppercase">
                 {eyebrow}
               </span>
             </div>
@@ -26,9 +26,12 @@ export default function HeroSection() {
               {subheading}
             </p>
 
-            <div className="pt-2">
+            <div className="pt-2 flex flex-wrap items-center gap-4">
               <Button href={cta.href} variant="primary" className="!px-8 !py-4 text-xs uppercase tracking-widest font-medium">
                 {cta.text}
+              </Button>
+              <Button href={secondaryCta.href} variant="secondary" className="!px-8 !py-4 text-xs uppercase tracking-widest font-medium">
+                {secondaryCta.text}
               </Button>
             </div>
           </div>
@@ -36,23 +39,23 @@ export default function HeroSection() {
           {/* Right Column: Staggered Imagery Frame */}
           <div className="lg:col-span-5 xl:col-span-5 relative flex justify-center items-center">
             <div className="relative w-full max-w-[420px] aspect-[4/5]">
-              {/* Primary Large Image */}
-              <div className="relative w-[82%] h-[82%] rounded-t-[140px] rounded-b-none overflow-hidden shadow-sm border-2 border-theme-border/30">
+              {/* Primary Large Image: Dr. Maya Reynolds Portrait */}
+              <div className="relative w-[82%] h-[82%] rounded-t-[140px] rounded-b-none overflow-hidden shadow-md border-2 border-theme-border/50">
                 <Image
-                  src={images.family.src}
-                  alt={images.family.alt}
+                  src={images.headshot.src}
+                  alt={images.headshot.alt}
                   fill
                   sizes="(max-width: 768px) 100vw, 420px"
-                  className="object-cover"
+                  className="object-cover object-top"
                   priority
                 />
               </div>
 
-              {/* Secondary Overlapping Arched Image */}
-              <div className="absolute -bottom-4 -right-2 sm:-bottom-6 sm:-right-4 w-[54%] h-[58%] rounded-t-[90px] rounded-b-none overflow-hidden shadow-md border-4 border-theme-bg">
+              {/* Secondary Overlapping Arched Image: Sunlit Santa Monica Office */}
+              <div className="absolute -bottom-4 -right-2 sm:-bottom-6 sm:-right-4 w-[54%] h-[58%] rounded-t-[90px] rounded-b-none overflow-hidden shadow-lg border-4 border-theme-bg">
                 <Image
-                  src={images.child.src}
-                  alt={images.child.alt}
+                  src={images.officePreview.src}
+                  alt={images.officePreview.alt}
                   fill
                   sizes="(max-width: 768px) 50vw, 220px"
                   className="object-cover"

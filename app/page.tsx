@@ -7,7 +7,8 @@ import QuoteBanner from "@/components/sections/QuoteBanner";
 import AreasOfExpertise from "@/components/sections/AreasOfExpertise";
 import HowWeWorkSection from "@/components/sections/HowWeWorkSection";
 import TransitionBanner from "@/components/sections/TransitionBanner";
-import SpecialtiesGrid from "@/components/sections/SpecialtiesGrid";
+import OfficeSection from "@/components/sections/OfficeSection";
+import FAQSection from "@/components/sections/FAQSection";
 import AppointmentCTA from "@/components/sections/AppointmentCTA";
 
 export default function Home() {
@@ -22,7 +23,8 @@ export default function Home() {
         <AreasOfExpertise />
         <HowWeWorkSection />
         <TransitionBanner />
-        <SpecialtiesGrid />
+        <OfficeSection />
+        <FAQSection />
         <AppointmentCTA />
       </main>
       <Footer />
